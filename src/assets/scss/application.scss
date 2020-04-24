@@ -1,0 +1,39 @@
+$white: #fff;
+$gray: #808080;
+$black: #000000;
+$dark: #202020;
+$blue: #aaf;    
+.visualiser{
+    max-width: 90vw;
+    .arrayContainer{
+        margin: auto;
+        border: 1px solid $dark;
+        margin: auto;
+    }
+    .arrayItem{
+        width: 2px;
+        background-color: $blue;
+        display: inline-block;
+        margin: 0 1px; 
+    }
+}
+.appbar{
+    p{
+        color:$white
+    }
+    a{
+        text-decoration: none;
+        color:$white;
+    }
+}
+.projectText{
+    margin-bottom: 10px;
+}
+.projectTextBox{
+    min-height: 230px;
+}
+.modal{
+    a{
+        text-decoration: none;
+    }
+}
