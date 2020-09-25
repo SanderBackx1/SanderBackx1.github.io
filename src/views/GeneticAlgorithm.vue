@@ -58,11 +58,9 @@ export default {
             this.started = false;
             this.generation = 0;
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            this.population = new Population(this.popSize);
-            this.goal = new Goal({ x: 350, y: 700 });
-            this.obstacles = new Obstacles(this.obstaclesAmount);
         },
         start() {
+            this.run = true;
             this.started = true;
             this.generation = 1;
             this.population = new Population(this.popSize);
@@ -93,7 +91,9 @@ export default {
             this.obstacles.draw(this.ctx);
         },
         checkObstacles() {
-            this.obstacles.addRemoveObjects(this.obstaclesAmount);
+            if (this.obstacles) {
+                this.obstacles.addRemoveObjects(this.obstaclesAmount);
+            }
         },
     },
 };
