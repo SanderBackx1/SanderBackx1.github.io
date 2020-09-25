@@ -1,9 +1,9 @@
 export default class Dot {
-    constructor(pos) {
+    constructor(pos, brainsize) {
         this.pos = pos;
         this.vel = { x: 0, y: 0 };
         this.acc = { x: 0, y: 0 };
-        this.brain = new Brain(400);
+        this.brain = new Brain(brainsize);
         this.maxSpeed = 5
         this.dead = false;
         this.fitness = 0;
@@ -80,7 +80,8 @@ export default class Dot {
     }
 
     clone(startpos) {
-        const dot = new Dot(startpos, this.maxSpeed, this.maxSteps);
+        const dot = new Dot(startpos);
+        dot.maxSpeed =this.maxSpeed
         dot.brain = this.brain.clone();
         return dot;
     }
@@ -103,6 +104,21 @@ class Brain {
         this.directions = [];
         this.step = 0;
         this.randomize();
+    }
+    addNewSteps(amount){
+        for (let i = 0; i < amount; i++) {
+            let randomAngle = this.getRandomInt(Math.PI * 2);
+            const vector = {
+                x: Math.cos(randomAngle),
+                y: Math.sin(randomAngle),
+            };
+            this.directions.push(vector);
+        }
+    }
+    removeSteps(amount){
+        for(let i=0; i<amount;i++){
+            this.directions.pop();
+        }
     }
     randomize() {
         this.directions = [];

@@ -3,19 +3,29 @@ export default class Population {
     constructor(size) {
         this.size = size;
         this.dots = [];
-        this.fillPopulation();
         this.generation = 1;
         this.bestDot = 0;
-
+        this.brainsize = 400;
+        this.fillPopulation();
+        
     }
     fillPopulation() {
         this.dots = [];
         for (let i = 0; i < this.size; i++) {
-            const newDot = new Dot({ x: 350, y: 100 });
+            const newDot = new Dot({ x: 350, y: 100 }, this.brainsize);
             this.dots.push(newDot);
         }
     }
-
+    checkSteps(steps){
+        this.brainsize = steps;
+        this.dots.forEach((dot)=>{
+            if(dot.brain.directions.length>steps){
+                dot.brain.removeSteps(dot.brain.directions.length-steps);
+            }else if (dot.brain.directions.length<steps){
+                dot.brain.addNewSteps(steps-dot.brain.directions.length)
+            }
+        })
+    }
     update(border, goal, obstacle) {
         this.dots.forEach((dot) => {
             obstacle.checkCollision(dot);

@@ -22,6 +22,13 @@
                 :max="50"
                 label="Change obstacles amount"
             ></v-slider>
+            <v-slider
+                v-model="maxsteps"
+                @change="checkSteps"
+                :min="50"
+                :max="500"
+                label="Change max steps"
+            ></v-slider>
             <p>References: Code Bullet <a href="https://www.youtube.com/watch?v=BOZfhUcNiqk">Youtube video</a></p>
         </v-container>
     </div>
@@ -40,6 +47,7 @@ export default {
             population: null,
             goal: null,
             obstaclesAmount: 5,
+            maxsteps:400,
             obstacles: null,
             run: true,
             generation: 0,
@@ -95,6 +103,11 @@ export default {
                 this.obstacles.addRemoveObjects(this.obstaclesAmount);
             }
         },
+        checkSteps(){
+            if(this.population){
+                this.population.checkSteps(this.maxsteps);
+            }
+        }
     },
 };
 </script>
