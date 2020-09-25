@@ -40,9 +40,11 @@ export default class ObstacleManager {
     }
 
     checkCollision(dot) {
-        this.obstacles.forEach((obj) => {
-            obj.checkCollision(dot);
-        });
+        if (this.obstacles.length > 0) {
+            this.obstacles.forEach((obj) => {
+                obj.checkCollision(dot);
+            });
+        }
     }
     draw(ctx) {
         this.obstacles.forEach((obj) => {
@@ -52,14 +54,14 @@ export default class ObstacleManager {
     clear() {
         this.obstacles = [];
     }
-    addRemoveObjects(size) {
+    addRemoveObjects(size) {    
         if (size > this.obstacles.length) {
             this.generate(size - this.obstacles.length);
         } else if (size < this.obstacles.length) {
-            while(this.obstacles.length>size){
+            while (this.obstacles.length > size) {
                 this.obstacles.pop();
             }
         }
-        this.size = size
+        this.size = size;
     }
 }

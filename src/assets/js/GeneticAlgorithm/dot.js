@@ -70,7 +70,7 @@ export default class Dot {
             this.fitness =  1 / (this.brain.step * this.brain.step ) + 0.01;
         }else{
             const distanceToGoal = this.calcDist(this.pos.x, this.pos.y, goal.x, goal.y);
-            this.fitness = 1 / (distanceToGoal*distanceToGoal*distanceToGoal);
+            this.fitness = 1 / (distanceToGoal*distanceToGoal);
         }
     }
     calcDist(x1, y1, x2, y2) {
