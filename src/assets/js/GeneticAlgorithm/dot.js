@@ -104,6 +104,7 @@ class Brain {
         this.directions = [];
         this.step = 0;
         this.randomize();
+        this.mutationrate = 0.01
     }
     addNewSteps(amount){
         for (let i = 0; i < amount; i++) {
@@ -137,16 +138,16 @@ class Brain {
     clone() {
         const clone = new Brain(this.size);
         clone.directions = [];
+        clone.mutationrate = this.mutationrate;
         this.directions.forEach((direction) => {
             clone.directions.push(direction);
         });
         return clone;
     }
     mutate() {
-        const mutationrate = 0.005;
         for (let i = 0; i < this.directions.length - 1; i++) {
             const rand = Math.random();
-            if (rand < mutationrate) {
+            if (rand < this.mutationrate) {
                 const randomAngle = this.getRandomInt(Math.PI * 2);
                 const vector = {
                     x: Math.cos(randomAngle),

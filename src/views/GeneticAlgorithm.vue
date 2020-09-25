@@ -22,13 +22,20 @@
                 :max="50"
                 label="Change obstacles amount"
             ></v-slider>
-            <v-slider
-                v-model="maxsteps"
-                @change="checkSteps"
-                :min="50"
-                :max="500"
-                label="Change max steps"
-            ></v-slider>
+            <v-slider v-model="maxsteps" @change="checkSteps" :min="50" :max="500" label="Change max steps"></v-slider>
+            <v-row>
+                <v-col style="max-width: 150px">
+                    <v-text-field
+                        type="number"
+                        @change="changeMutationfreq()"
+                        @keyup.enter="changeMutationfreq()"
+                        v-model="mutation"
+                        label="mutation frequency"
+                        step="0.01"
+                        min="0"
+                    ></v-text-field>
+                </v-col>
+            </v-row>
             <p>References: Code Bullet <a href="https://www.youtube.com/watch?v=BOZfhUcNiqk">Youtube video</a></p>
         </v-container>
     </div>
@@ -47,11 +54,12 @@ export default {
             population: null,
             goal: null,
             obstaclesAmount: 5,
-            maxsteps:400,
+            maxsteps: 400,
             obstacles: null,
             run: true,
             generation: 0,
             started: false,
+            mutation: 0.01,
         };
     },
     mounted() {
@@ -103,9 +111,14 @@ export default {
                 this.obstacles.addRemoveObjects(this.obstaclesAmount);
             }
         },
-        checkSteps(){
-            if(this.population){
+        checkSteps() {
+            if (this.population) {
                 this.population.checkSteps(this.maxsteps);
+            }
+        },
+        changeMutationfreq(){
+            if(this.population){
+                this.population.changeMutationfreq(this.mutation)
             }
         }
     },

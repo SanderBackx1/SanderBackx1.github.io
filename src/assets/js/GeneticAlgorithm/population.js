@@ -16,6 +16,11 @@ export default class Population {
             this.dots.push(newDot);
         }
     }
+    changeMutationfreq(freq){
+        this.dots.forEach((dot)=>{
+            dot.brain.mutationrate = freq;
+        })
+    }
     checkSteps(steps){
         this.brainsize = steps;
         this.dots.forEach((dot)=>{
