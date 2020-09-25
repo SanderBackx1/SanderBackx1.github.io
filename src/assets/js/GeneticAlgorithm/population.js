@@ -10,7 +10,6 @@ export default class Population {
     }
     fillPopulation() {
         this.dots = [];
-        console.log('speed ',this.speed);
         for (let i = 0; i < this.size; i++) {
             const newDot = new Dot({ x: 350, y: 100 });
             this.dots.push(newDot);

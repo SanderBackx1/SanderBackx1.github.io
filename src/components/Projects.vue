@@ -111,6 +111,7 @@ export default {
                         { name: "Javascript", icon: "mdi-language-javascript" },
                     ],
                     route:'genalgo',
+                    gif:"https://i.ibb.co/5R21MLC/genalgo.gif"
                 },
             ],
         };

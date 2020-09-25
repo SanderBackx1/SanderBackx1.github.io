@@ -2,13 +2,17 @@
     <div class="genalgo">
         <v-container>
             <canvas width="750" height="750" ref="canvas"></canvas>
-            <p>Current generation: {{generation}}</p>
+            <p>Current generation: {{ generation }}</p>
             <v-row>
                 <v-col>
-                    <v-btn v-on:click="start()">Start</v-btn>
-                    <v-btn v-if="run" v-on:click="stop()">stop</v-btn>
-                    <v-btn v-else v-on:click="resume()">resume</v-btn>
-                    <v-btn v-on:click="reset()">reset</v-btn>
+                    <v-btn v-if="!started" v-on:click="start()">Start</v-btn>
+                    <div v-else>
+                        <v-btn v-if="run" v-on:click="stop()">stop</v-btn>
+                        <div v-else>
+                            <v-btn v-on:click="resume()">resume</v-btn>
+                            <v-btn v-on:click="reset()">reset</v-btn>
+                        </div>
+                    </div>
                 </v-col>
             </v-row>
             <v-slider
@@ -38,9 +42,8 @@ export default {
             obstaclesAmount: 5,
             obstacles: null,
             run: true,
-            speed: 5,
-            maxSteps: 400,
-            generation:0,
+            generation: 0,
+            started: false,
         };
     },
     mounted() {
@@ -52,6 +55,7 @@ export default {
             this.run = false;
         },
         reset() {
+            this.started = false;
             this.generation = 0;
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             this.population = new Population(this.popSize);
@@ -59,6 +63,7 @@ export default {
             this.obstacles = new Obstacles(this.obstaclesAmount);
         },
         start() {
+            this.started = true;
             this.generation = 1;
             this.population = new Population(this.popSize);
             this.goal = new Goal({ x: 350, y: 700 });
