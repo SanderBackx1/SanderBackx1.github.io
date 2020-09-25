@@ -18,22 +18,29 @@
 
             <v-slider
                 v-model="volume"
-                append-icon="+"
-                prepend-icon="-"
                 @change="checkSize"
                 :min="min"
                 :max="max"
-                label="Increase array size"
+                label="Change array size"
             ></v-slider>
             <v-row>
                 <v-col style="max-width: 150px">
-                    <v-text-field type='number' @keyup.enter="initArray()" v-model="maxsize" label="Max item size"></v-text-field>
+                    <v-text-field
+                        type="number"
+                        @keyup.enter="initArray()"
+                        v-model="maxsize"
+                        label="Max item size"
+                    ></v-text-field>
                 </v-col>
-                
+
                 <v-col style="max-width: 150px">
-                    <v-text-field type='number' @keyup.enter="initArray()" v-model="delayInMs" label="Speed in ms"></v-text-field>
+                    <v-text-field
+                        type="number"
+                        @keyup.enter="initArray()"
+                        v-model="delayInMs"
+                        label="Speed in ms"
+                    ></v-text-field>
                 </v-col>
-                
             </v-row>
             <div class="arrayContainer">
                 <div
@@ -52,13 +59,13 @@ import * as sorting from "../assets/js/sorting";
 export default {
     data() {
         return {
-            volume: 150,
+            volume: 125,
             min: 30,
-            max: 300,
+            max: 227,
             algorithm: 0,
             array: [],
-            length: 300,
-            maxsize: 750,
+            length: 200,
+            maxsize: 500,
             delayInMs: 5,
         };
     },

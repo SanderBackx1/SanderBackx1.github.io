@@ -26,7 +26,7 @@ export default {
                 </slot>
             </v-card-title>
             <v-card-text>
-                <v-img lazy-src="../assets/placeholder-image.jpg" max-height="500" contain :src="project.gif" />
+                <v-img max-height="500" contain :src="project.gif" />
                 <footer class="modal-footer">
                     <slot name="footer">
                         <v-btn v-if="project.link" type="button" :href="project.link" target="_blank">

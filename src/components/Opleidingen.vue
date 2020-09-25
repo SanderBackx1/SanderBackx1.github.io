@@ -1,13 +1,13 @@
 <template>
     <v-container>
-        <hr />
-        <v-row align="center" justify="center">
-            <h2>Opleidingen</h2>
+        <hr class="margin-top-20" />
+        <v-row class="margin-top-25" align="center" justify="center">
+            <h2 class="portfolio-title">Opleidingen</h2>
         </v-row>
         <div class='d-flex justify-space-around align-center mb-6'>
-            <v-list three-line max-width="500">
+            <v-list three-line max-width="500" class="margin-top-25">
                 <template v-for="(study, index) in studies">
-                    <div :key="index">
+                    <div :key="index" >
                         <v-list-item>
                             <v-list-item-avatar>
                                 <v-img :src="study.img"></v-img>

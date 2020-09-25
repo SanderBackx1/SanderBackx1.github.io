@@ -1,9 +1,9 @@
 <template>
     <div>
-        <v-card color="transparent" width="350px" min-height="450px">
+        <v-card color="transparent" class="project-card" width="350px" min-height="450px">
             <v-card-title>
                 <v-flex>
-                    <h2>{{ project.name }}</h2>
+                    <h2 class="project-title">{{ project.name }}</h2>
                 </v-flex>
             </v-card-title>
             <v-card-text>
@@ -11,12 +11,12 @@
                 <div class='projectText'>{{ project.description }}</div>
                 <div  class='projectText'>{{ project.whatIdid }}</div>
                 </div>
-                <hr />
-                <div>Gebruikte technologieën</div>
+                <hr  />
+                <div class="margin-top-15">Gebruikte technologieën</div>
                 <v-layout>
                     <template v-for="(tech, i) in project.technologies">
                         <v-flex xs3 :key="i">
-                            <div class="text-center projectText">
+                            <div class="text-center projectText margin-top-10">
                                 <v-btn icon>
                                     <v-icon>{{ tech.icon }}</v-icon>
                                 </v-btn>
@@ -27,7 +27,7 @@
                 </v-layout>
                 <div v-if="project.gif">
                     <modal v-show="isModalVisible"  v-bind:project="project" @close="closeModal" />
-                    <v-btn @click="isModalVisible=true">Bekijken</v-btn>
+                    <v-btn @click="isModalVisible=true" class="margin-bottom-10">Bekijken</v-btn>
                 </div>
             </v-card-text>
         </v-card>

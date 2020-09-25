@@ -1,9 +1,9 @@
 <template>
     <v-container>
-        <v-row align="center" justify="center">
-            <h2>Prijzen</h2>
+        <v-row align="center" class="margin-top-25" justify="center">
+            <h2 class="portfolio-title">Prijzen</h2>
         </v-row>
-        <div class="d-flex justify-space-around align-center mb-6">
+        <div class="d-flex justify-space-around align-center mb-6 margin-top-25">
             <v-list max-width="500">
                     <Prijs v-for="(price, index) in prices" :key="index" v-bind:price="price" />
             </v-list>

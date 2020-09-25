@@ -2,17 +2,15 @@
     <v-app>
         <v-app-bar class="appbar" app dark>
             <div class="row">
-                <div class="col-10">
+                <div class="col-10 margin-top-10">
                     <router-link to="/">
                         <p @click="$vuetify.goTo('#header')">Sander Backx</p>
                     </router-link>
                 </div>
-                <div class="col-1 text-center">
+                <div class="col-1 text-center margin-top-10">
                     <router-link to="/">
-                        <v-btn icon>
-                            <p @click="$vuetify.goTo('#projects')">Projecten</p>
-                        </v-btn></router-link
-                    >
+                        <p @click="$vuetify.goTo('#projects')">Projecten</p>
+                    </router-link>
                 </div>
                 <div class="col-1 text-center">
                     <router-link to="/">
@@ -40,6 +38,5 @@ export default {
     components: {
         Footer,
     },
-
 };
 </script>

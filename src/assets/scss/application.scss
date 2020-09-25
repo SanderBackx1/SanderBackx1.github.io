@@ -6,19 +6,48 @@ $blue: #aaf;
 .visualiser{
     max-width: 90vw;
     .arrayContainer{
+        
+        border-radius: 15px;
+        padding: 10px;
         margin: auto;
-        border: 1px solid $dark;
+        border: 2px solid $dark;
         margin: auto;
     }
     .arrayItem{
-        width: 2px;
+        width: 3px;
         background-color: $blue;
         display: inline-block;
         margin: 0 1px; 
     }
 }
+.genalgo{
+    margin: 20px;
+    canvas{
+        border:2px solid black;
+        border-radius: 5px;
+    }
+    button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+.mh-100{
+    min-height: 100px;
+}
+.mh-150{
+    min-height: 150px;
+}
+.mh-200{
+    min-height: 200px;
+}
+.mh-250{
+    min-height: 250px;
+}
 .appbar{
+    vertical-align: middle;
     p{
+        font-size: 20px;
+        margin: 0;        
         color:$white
     }
     a{
@@ -27,13 +56,55 @@ $blue: #aaf;
     }
 }
 .projectText{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 .projectTextBox{
     min-height: 230px;
+    
 }
 .modal{
     a{
         text-decoration: none;
     }
+}
+.margin-stripe{
+    margin-top:20px;
+}
+.margin-top-25{
+    margin-top: 25px;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+.margin-top-15{
+    margin-top: 15px;
+}
+.margin-top-10{
+    margin-top: 10px;
+}
+
+.project-card{
+    padding: 10px;
+}
+
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+
+.portfolio-title{
+    font-size: 32px;
+}
+
+.project-title{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.subhead {
+    text-align: center;
+}
+
+.margin-bottom-25{
+    margin-bottom: 25px;
 }
