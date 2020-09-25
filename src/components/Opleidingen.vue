@@ -38,8 +38,8 @@ export default {
                     title: "Thomas More Geel",
                     from: 2018,
                     untill: "heden",
-                    course: "Toegepaste Informatica",
-                    subcourse: "Applicatieonwikkeling & business intelligence",
+                    course: "Applied Computer Science",
+                    subcourse: "Artificial Intelligence",
                     img: "https://www.thomasmore.be/sites/www.thomasmore.be/files/tm_vignet_rgb.png",
                 },
                 {
