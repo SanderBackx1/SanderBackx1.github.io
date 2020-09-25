@@ -55,10 +55,11 @@ export default class ObstacleManager {
     addRemoveObjects(size) {
         if (size > this.obstacles.length) {
             this.generate(size - this.obstacles.length);
-        } else if (size < this.size) {
+        } else if (size < this.obstacles.length) {
             while(this.obstacles.length>size){
                 this.obstacles.pop();
             }
         }
+        this.size = size
     }
 }
