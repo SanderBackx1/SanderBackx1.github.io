@@ -38,7 +38,7 @@ export default {
         {
           title: "Hack The Future",
           type: "Hackathon",
-          year: 2021,
+          year: 2020,
           price: "4e plaats AI NLP Challenge",
           img: "https://www.hackthefuture.be/2020/assets/images/hero/hero.webp",
           moreInfo:
