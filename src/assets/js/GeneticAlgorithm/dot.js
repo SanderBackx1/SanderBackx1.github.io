@@ -66,11 +66,11 @@ export default class Dot {
     }
 
     calculateFitness(goal) {
+        const distanceToGoal = this.calcDist(this.pos.x, this.pos.y, goal.x, goal.y);
         if (this.reachedGoal) {
-            this.fitness =  1 / (this.brain.step * this.brain.step ) + 0.01;
+            this.fitness =  1 / (distanceToGoal * this.brain.step ) + 0.01;
         }else{
-            const distanceToGoal = this.calcDist(this.pos.x, this.pos.y, goal.x, goal.y);
-            this.fitness = 1 / (distanceToGoal*distanceToGoal);
+            this.fitness = 1 / (distanceToGoal * this.brain.step);
         }
     }
     calcDist(x1, y1, x2, y2) {

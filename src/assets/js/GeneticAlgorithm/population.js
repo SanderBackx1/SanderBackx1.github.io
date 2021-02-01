@@ -73,6 +73,8 @@ export default class Population {
         for (let i = 0; i < newSize; i++) {
             const parent = this.selectParent(total);
             newDots.push(parent.clone({ x: 350, y: 100 }));
+            // const offspring = this.calculateOffspring();
+            // newDots.push(offspring);
         }
 
         this.dots = newDots;
@@ -87,6 +89,20 @@ export default class Population {
                 return this.dots[i];
             }
         }
+    }
+    calculateOffspring(){
+        const total = this.calcaulateTotalFitnes();
+        const p1 = this.selectParent(total);
+        const p2 = this.selectParent(total);        
+        const clone = p1.clone({x:350, y:100});
+
+        const influence = Math.floor( Math.random() * clone.brain.directions.length/2);
+        for(let i=0;i<influence;i++){
+            const ridx = Math.floor(Math.random() * (clone.brain.directions.length-1));
+            clone.brain.directions[ridx] = p2.brain.directions[ridx];
+        }
+
+        return clone;
     }
     mutate() {
         this.dots.forEach((dot) => {
