@@ -11,7 +11,7 @@
                         <v-col cols="12">
                             <div class="display-2 font-weight-bold">Sander Backx</div>
                             <div style="min-height:100px">
-                                <div class="headline">Student</div>
+                                <div class="headline">Student AI</div>
                             </div>
                         </v-col>
                     </v-row>
@@ -44,7 +44,7 @@ export default {
             buffer: 500,
             count: 0,
             aboutText:
-                "In mijn vrije tijd werk ik heel graag aan applicaties en spendeer ik veel tijd aan het bijleren van nieuwe dingen. Ik heb al veel liggen prutsen met Webdevelopment, voornamenlijk met NodeJS, Express, VueJS, Typescript en Javascript. Ook heb ik enorme interesse in AI. Hier heb ik al enkele projecten gemaakt met Fast.ai, maar hier wil ik nog enorm veel van bijleren. Hierdoor ben ik uiteraard student in Artificial Intelligence aan Thomas More",
+                "In mijn vrije tijd werk ik heel graag aan applicaties en spendeer ik veel tijd aan het bijleren van nieuwe dingen. Ik heb al veel liggen prutsen met Webdevelopment, voornamenlijk met NodeJS, Express, VueJS, Typescript en Javascript. Ook heb ik enorme interesse in AI. Hier heb ik al enkele projecten gemaakt met Fast.ai, maar hier wil ik nog enorm veel van bijleren. Hierdoor ben ik uiteraard student in Artificial Intelligence aan Thomas More.",
         };
     },
 };
