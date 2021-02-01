@@ -18,7 +18,7 @@
             </v-col>
         </v-row>
         <v-row style="margin-bottom:40px" align="center" justify="center" >
-            <v-btn outlined href="../assets/CV_SanderBackxOnline.pdf" target="_blank">Bekijk mijn CV</v-btn>
+            <v-btn outlined href="https://drive.google.com/file/d/14w-gyw_hmgrV2C5GBy0Q9rGWbMTW6aeU/view?usp=sharing" target="_blank">Bekijk mijn CV</v-btn>
         </v-row>
     </v-container>
 </template>
