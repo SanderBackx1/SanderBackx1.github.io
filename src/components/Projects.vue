@@ -25,9 +25,9 @@ export default {
         {
           name: "Selfdriving Car",
           description:
-            "Dit was een project voor het vak AI Projects. Hierbij konden we kiezen uit een hoop onderwerpen. Mijn collega's en ik kozen voor Selfdriving Car.",
+            "This was a project for my course AI Projects. We had the opportunity to choose between different subjects and my colleagues and I chose to try to create a selfdriving car.",
           whatIdid:
-            "Ik heb gebruik gemaakt van Fast.ai voor image regression. Onze data bestond uit een game-frame met de corresponderende controller input. Hierbij leerde we ons model aan om voor game-frames de controller input te predicten. Deze controller input stuurde we dan via een virtuele controller terug door naar de game.",
+            "I used Fast.ai image regression. Our data existed of game-frames with corresponding controller input which we recorded while driving around. This data we used to teach our model to give controller input when handed a game frame. This result we then gave to a virtual controller which controlled the game.",
           technologies: [
             {
               name: "Fast.ai",
@@ -45,9 +45,9 @@ export default {
         {
           name: "Bot ross",
           description:
-            "Dit was een project voor het vak Big Data. Hierbij kregen we de opdracht een image classifier te maken. We kozen voor een classifier die schilders herkent aan hun schilderijen. ",
+            "This was a project for my course Big Data. We were tasked to create an image classifier. We chose to classify paintings and painters.",
           whatIdid:
-            "Tijdens dit project heb ik samen met mijn collega een image classifier gemaakt m.b.v. fast.ai. We verkregen images via de Bing api die we vervolgens hebben opgekuist en waar we ons model mee hebben getrained. We hebben dit model ook online geplaatst. Als uitbereiding hebben we hier ook neural style transfer aan toegevoegd, deze kregen we niet online omdat het genereren van een image veel tijd in beslag neemt. ",
+            "During this project I worked together with my colleague to create an image classifier using Fast.ai. We used Bing api to retreive images from the web which we used for training. Given an image, our model predicts which painter painted the image. As an extension we added NST that combines an image and a painting style to create a new image. Sadly, this process takes to long to do on the web.",
           technologies: [
             {
               name: "Fast.ai",
@@ -64,9 +64,9 @@ export default {
         {
           name: "Genetic Algorithm",
           description:
-            "Bij dit project schreef ik een genetic algorithm dat van punt a naar punt b moet geraken.",
+            "A small project where I wrote a genetic algorithm that tasks an object to go from point a to b.",
           whatIdid:
-            "Ik heb gebruik gemaakt van Javascript voor het algoritme. De visualisatie gebeurde op het html canvas mbv VueJs. U kan obstakels toevoegen en verwijderen, hierdoor kan zien hoe het algoritme zichzelf aanpast.",
+            "I used Javascript for the algorithm. The visualisation is created with HTML canvas and VueJs. You can add and remove obstacles to see the change in behaviour of the algorithm.",
           technologies: [
             {
               name: "VueJs",
@@ -81,9 +81,9 @@ export default {
         {
           name: "Sorting Visualiser",
           description:
-            "Dit was een klein persoonlijk project waarbij ik sorteer algoritmes heb onderzocht en heb gevisualiseert.",
+            "A small project where I visualised multiple search alogirthms.",
           whatIdid:
-            "Ik heb gebruik gemaakt van Javascript voor de algoritmes. Voor te visualiseren heb ik gebruik gemaakt van VueJS en SCSS. U kan deze interactieve visualiser op deze website bekijken.",
+            "I used Javascript for the algorithms. I used VueJs and SCSS to visualise the algorithms.",
           technologies: [
             {
               name: "VueJs",
@@ -100,9 +100,9 @@ export default {
         {
           name: "Alumniavond",
           description:
-            "Deze webapplicatie was een opdracht voor het vak PHP. Met deze applicatie kan men alumniavonden organiseren en kunnen alumni zich hiervoor inschrijven.",
+            "This webapplication was a task for the course PHP. This application is used to organise an event where users can sign up for.",
           whatIdid:
-            "Deze opdracht was in groepen van 4. Ik heb vooral gezorgd voor het implementeren van Javascript waar nodig. Ook heb ik enkele pagina's met CRUD mogelijkheden aangemaakt. Ik ben erg trots op het mailadres filtersysteem dat ik heb kunnen realiseren.",
+            "I mainly worked on the implementation of Javascript where needed. I also made some CRUD's. The part I am most proud of is the filterable mail system. Users can be asked questions through a form and can afterwards be filtered out thanks to these questions. ",
           technologies: [
             {
               name: "PHP",
@@ -124,9 +124,9 @@ export default {
         {
           name: "Ontwerpproject",
           description:
-            "Dit was een project waarbij we in groep gedurende één semester een ontwerp moesten uitwerken voor een webapplicatie die het organiseren van een festival makkelijker zou maken.",
+            "This was a project where we had to plan out an application used to organise music festivals.",
           whatIdid:
-            "Tijdens dit project heb ik met mijn collega's samengewerkt om de klant haar eisen zo goed mogelijk uit te schrijven en te verwerken in een use case diagramma. Ook hebben we schermontwerpen gemaakt",
+            "During this project my colleagues and I created UseCase diagrams and screen mockups alongside feedback from a customer.",
           technologies: [
             {
               name: "Axure",
@@ -142,9 +142,9 @@ export default {
         {
           name: "The Box - Game",
           description:
-            "Dit was een project van het 1ste jaar Game Development in Kortrijk. Onze opdracht was een 2D game maken in C++. Dit mocht een bestaande game zijn die we namaakte, of een zelfverzonnen game",
+            "A project I made during my first year Game Development in Kortrijk. We were tasked to create of remake a 2D game in C++. I decided to create a new game.",
           whatIdid:
-            "Ik koos ervoor om zelf een game te verzinnen. De speler moet alle sleutels verzamelen om zo het level te kunnen verlaten. Er zijn vijanden waar de speler op kan schieten en er zijn portalen die de speler verplaatsen.",
+            "The player has to retreive all the keys hidden in the level. There are enemies that shoot projectiles and portals that can teleport the player.",
           technologies: [
             {
               name: "C++",

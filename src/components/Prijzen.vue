@@ -30,19 +30,19 @@ export default {
           title: "Hack The Future",
           type: "Hackathon",
           year: 2019,
-          price: "1ste plaats AI NLP Challenge",
+          price: "1st place AI NLP Challenge",
           img: "https://blogs.sap.com/wp-content/uploads/2019/11/2-14.jpg",
           moreInfo:
-            "Bij deze hackathon was de opdracht om in een groep van 2 een wachtwoord te kraken m.b.v. +-10 000 emails en een aantal vorige wachtwoorden. Samen met mijn collega Remco Goyvaerts hebben wij de mails opgesplitst in train en test data. Vervolgens hebben we een classifier geschreven die de mail opdeelde in de verschillende categorieën die voorkwamen in de vorige wachtwoorden. Hierna hebben we kernwoorden uitgezocht en hebben we hier het nieuwe wachtwoord mee proberen te kraken.",
+            "During this hackathon we wre tasked in groups of 2 to search for a password using +-10 000 emails. We had to classify the emails for their subject and afterwards extract keywords. The keywords could then be combined to create a password.",
         },
         {
           title: "Hack The Future",
           type: "Hackathon",
           year: 2020,
-          price: "4e plaats AI NLP Challenge",
+          price: "4th place AI NLP Challenge",
           img: "https://www.hackthefuture.be/2020/assets/images/hero/hero.webp",
           moreInfo:
-            "Bij deze hackathon was de opdracht om in een groep van 2 trolls te vinden in een bepaald forum. De data bestond uit forum-posts en comments. Met fast.ai hebben we 2 textclassifiers getrained, één voor de categorieën en één voor sentiment. We hebben de forum-posts gefiltered op categorie en hebben sentiment geclassified op de comments. Als een post veel negatieve comments had, was het een troll post.",
+            "During this hackathon we were tasked in groups of 2 to find trolls on a forum. We had to classify forum posts based on their subject and afterwards we had to do sentiment analysis to see which posts had a big amount of negative comments. These were considered trolls posts.",
         },
         {
           title: "AtOnce Hackathon",
@@ -52,7 +52,7 @@ export default {
           img:
             "https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/s960x960/75072695_2512878532276857_7428888740140941312_o.png?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=21IgxNj4Y-8AX_AejJY&_nc_ht=scontent-bru2-1.xx&oh=f645b72ef4d869080e4ef57e4295e183&oe=5EC8EE51",
           moreInfo:
-            "Bij deze hackathon was de opdracht om in een groep van 5 patient zero te vinden van een epidemie. Mijn collega's en ik hebben er voor gekozen m.b.v. een algoritme en de vroegere nummers te kunnen voorspellen waar de epidemie vandaan komt en waar hij naartoe gaat.",
+            "During this hackathon we were tasked in groups of 5 to find pationt zero of an epidemic. My colleagues and I used an algorithm to backtrack an epidemic to find where this epidemic started. Thanks to this algorithm we could also predict where this epidemic is going.",
         },
       ],
     };
